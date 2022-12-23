@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dev X team |LOGO Example</title>
+  <style>
+    @font-face {
+      font-family: Coolvetica;
+      src: url(fonts/coolvetica-condensed-rg.otf) format(opentype);
+    }
+    body{
+      background-color: #223;
+      margin:50px;
+    }
+    .brand{
+      text-decoration: none;
+      font-size: 500%;
+
+      font-family:Coolvetica ;
+
+      /* border: 1px dotted gray; */
+    
+    }
+
+    .brand,
+    .brand span{
+        display: inline-block;
+    }
+
+    .brand h1{
+      /* border: 1px solid red; */
+    }
+
+
+
+    .brand>h1> span:first-child{
+      color:  #a880ff;
+      font-size: 120%;
+      transform: translateY(-30%);
+      margin-right: -5%;
+    }
+    .brand>h1> span:first-child >span{
+      transform: scaleX(1.7);
+      color: #854dff;
+    }
+
+    .brand span:nth-child(2){
+      /* border: 1px solid green; */
+      font-size: 300%;
+      font-weight: 100;
+      margin-right: -5%;
+      background-image: linear-gradient(90deg, #621aff,#dcccff) ;
+      color: transparent;
+      -webkit-background-clip: text;
+
+      
+    }
+
+    .brand>h1> span:last-child{
+      font-size: 75%;
+      color: #7433ff;
+    
+    }
+    .brand>h1> span:last-child >span{
+      transform: skew(20deg);
+     
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <!-- root url -->
+    <a class="brand" href="/">
+      <h1>
+        <span>de<span>v</span></span>
+        <span>X</span> 
+        <span> <span>t</span>eam</span></h1>
+    </a>
+
+  </nav>
+  
+</body>
+</html>
