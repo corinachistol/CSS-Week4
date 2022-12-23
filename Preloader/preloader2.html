@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PURE CSS Preloader Example 2</title>
+  <style>
+    body{
+      background-color: #345;
+      color: wheat;
+    }
+
+    .preloader{
+      border: 1px solid red;
+      margin-top: 100px;
+      display: flex;
+      /* justify-content: flex-start; */
+    
+      
+      
+    }
+
+    .preloader div{
+      width: 25px;
+      height: 25px;
+      /* border: 1px solid green; */
+      background-color: yellow;
+      margin: 5px;
+      color: transparent;
+      border-radius: 15px;
+
+      /* display: inline-flex; */
+
+      animation:jump 1s 10  alternate;
+    
+    
+      
+    }
+
+    .preloader div:first-child{
+     animation-delay: .3s;
+    }
+    .preloader div:nth-child(2){
+     animation-delay: .6s;
+    }
+    .preloader div:nth-child(3){
+     animation-delay: .9s;
+    }
+    .preloader div:nth-child(4){
+     animation-delay: 1.2s;
+    }
+    .preloader div:nth-child(5){
+     animation-delay: 1.5s;
+    }
+
+    @keyframes jump{
+      from{
+        transform: translateY(0);
+        border-radius: 0;
+      }
+      to{
+        transform: translateY(-40px);
+        border-radius: 15px;
+      }
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+  <div class="preloader">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+  
+</body>
+</html>

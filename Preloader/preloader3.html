@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PURE CSS Preloader Example 3</title>
+  <style>
+    body{
+      background-color: #345;
+      color: wheat;
+    }
+
+    .preloader{
+      border: 1px solid red;
+      margin-top: 100px;
+    }
+
+    .preloader div{
+      width: 25px;
+      height: 25px;
+      border: 1px solid green;
+      background-color: yellow;
+      margin: 5px;
+      color: transparent;
+      border-radius: 15px;
+
+      animation:jump 1s 10  alternate;
+      
+    }
+
+    .preloader div:first-child{
+     animation-delay: .3s;
+    }
+    .preloader div:nth-child(2){
+     animation-delay: .6s;
+    }
+    .preloader div:nth-child(3){
+     animation-delay: .9s;
+    }
+    .preloader div:nth-child(4){
+     animation-delay: 1.2s;
+    }
+    .preloader div:nth-child(5){
+     animation-delay: 1.5s;
+    }
+
+    @keyframes jump{
+      from{
+        transform: translatex(0);
+        /* border-radius: 0; */
+      }
+      to{
+        transform: translatex(40px);
+        /* border-radius: 15px; */
+      }
+    }
+    .preloader2{
+      border: 1px solid red;
+      margin-top: 100px;
+
+      display:inline-flex;
+      align-items: flex-end;
+      
+    }
+
+    .preloader2 div{
+      width: 5px;
+      height: 5px;
+      /* border: 1px solid green; */
+      background-color: yellow;
+      margin: 2px;
+      color: transparent;
+      border-radius: 5px;
+
+      /* display: inline-flex;
+      align-items: baseline; */
+
+      animation:jump2 0.5s 10  alternate;
+      
+    }
+    .preloader2 span{
+      display: inline-flex;
+      font-size: 20px;
+    }
+
+    .preloader2 div:first-child{
+     animation-delay: .3s;
+    }
+    .preloader2 div:nth-child(2){
+     animation-delay: .6s;
+    }
+    .preloader2 div:nth-child(3){
+     animation-delay: .9s;
+    }
+
+    @keyframes jump2{
+      from{
+        transform: translateY(0);
+        /* border-radius: 0; */
+      }
+      to{
+        transform: translateY(-10px);
+        /* border-radius: 15px; */
+      }
+    }
+
+
+  </style>
+</head>
+
+
+<body>
+  <div class="preloader">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+
+
+  <div class="preloader2">
+    <span>Loading</span>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    
+  </div>
+  
+</body>
+</html>

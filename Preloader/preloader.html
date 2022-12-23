@@ -1,0 +1,106 @@
+
+
+<!-- 
+  PRELOADER
+
+  VISUAL FEEDBACK | UX
+  box model
+  transform
+  animation
+  fx
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PURE CSS Preloader</title>
+  <style>
+    body{
+      background-color: #222;
+      color: white;
+    }
+
+    .preloader{
+      margin-top: 100px;
+      /* border: 1px solid red; */
+    }
+    .preloader div{
+      /* width: 20px; */
+      height: 20px;
+      /* background-color: orange; */
+      /* margin: 5px; */
+      /* display: inline-block; */
+      float: left;
+      /* try to align  horizontally using display flex/inline block */
+      animation: jump 1s 10 alternate;
+      /* color: transparent; */
+
+    }
+
+    
+     
+      /* animation-name: jump;
+      animation-duration: 2s;
+      animation-iteration-count: 6;
+      animation-direction: alternate; */
+    
+
+    .preloader div:nth-child(2){      
+      animation-delay: 0.3s;
+    }
+    .preloader div:nth-child(3){
+      animation-delay: 0.6s;
+    }
+    .preloader div:nth-child(4){
+      animation-delay: 0.9s;
+    }
+    .preloader div:nth-child(5){
+      animation-delay: 1.2s;
+    }
+     /*ANIMATION FRAME  */
+
+     /* ADD RULE */
+    @keyframes jump{
+      from{
+        transform: translateY(0);
+        opacity: 0.5;
+        /* border-radius: 0;
+        background-color: orange; */
+      }
+      to{
+        transform: translateY(-20px);
+        opacity: 1;
+        /* border-radius: 30px;
+        background-color: red; */
+
+        
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Inaltimea acestui div este dictata de continul lui.  Daca noi stergem cifra 5 din .preloader-> inaltimea acestuia scade.Pe cind latimea o mosteneste de la parintele lui, adica body care este calculata in mod automat de body. 
+  
+  Inaltimea div-urilor din .preloader este dictata de numarul liniilor de text din interiorul acestora.Daca marim linia de text, fontul, adaugam mai multe rinduri de text,adaugam padding automat se mareste inaltimea div-ului.  -->
+
+  <div class="preloader">
+    <div>S</div>
+    <div>T</div>
+    <div>Y</div>
+    <div>L</div>
+    <div>E</div>
+  </div>
+
+    <!-- make it horizontal
+     so it flashed the dots in the next text   loading... -->
+  
+</body>
+</html>
