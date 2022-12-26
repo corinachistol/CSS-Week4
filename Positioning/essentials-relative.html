@@ -1,0 +1,63 @@
+<!-- CSS Positioning(other than the document flow)
+
+  static = used so far
+
+  relative = atunci cind un element este pozitionat relativ, pe de o  parte el continua sa respecte fluxul natural, vede vecinii,etc.. pe de alta ,elementul pozitioant relativ primeste capacitati noi. Poate fi deplasat liber in orice directii(top, right, bottom, left, z-index) aka transform:translate. Cel mai des se utilizeaza la alinierea pictogramelor fata de text, a da careva efecte literelor de text,a scoate careva markere,butoane,un indicator,decoratii, ii ofera un fel de libertate locala
+
+  absolute
+
+  fixed
+
+  sticky -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS Relative Position</title>
+    <style>
+      body{
+        background-color: #222;
+      }
+
+      .parent{
+        border: 2px solid orange;
+        padding: 10px;
+        display: inline-block;
+        margin-left: 50px;
+      }
+
+      .parent div{
+        width: 100px;
+        height: 100px;
+      }
+
+      .parent .child-1{
+        background-color: #555;
+        height: 150px;
+      }
+      .parent .child-2{
+        background-color: #888;
+       /* POSITION RIGHT HERE */
+        position: relative;
+        top: 50px;
+        left: 50px;
+        z-index:-1 ;
+      }
+      .parent .child-3{
+        background-color: #BBB;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- HW1:define formula browser calculates BODY height ??? -->
+
+    <div class="parent">
+      <div class="child-1">1</div>
+      <div class="child-2">2</div>
+      <div class="child-3">3</div>
+    </div>
+    
+  </body>
+  </html>
