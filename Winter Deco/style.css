@@ -1,0 +1,77 @@
+.winter-add{
+  border: 1px solid black;
+  color: transparent;
+
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-image: 
+    radial-gradient(
+      ellipse at left bottom ,rgb(170, 170, 234) 30% , transparent 33%
+    ),
+    radial-gradient(
+      ellipse at right bottom ,rgb(113, 113, 197) 25% , transparent 27%
+    ),
+    radial-gradient(
+      ellipse at bottom ,rgb(73, 73, 134) 45% , transparent 55%
+    ),
+    linear-gradient(rgb(120, 117, 128), rgb(134, 134, 182))
+  ;
+
+
+  background-repeat: no-repeat;
+  
+}
+
+.tree{
+  /* border: 1px solid red; */
+  width: 100px;
+  height: 200px;
+
+  
+}
+
+.tree .top{
+  /* border: 1px solid red; */
+  border-radius: 100%;
+  width: 100%;
+  height: 25%;
+  background-image:
+    conic-gradient( at center 40%, transparent 40%, blue 40%, white, blue 60%, transparent 60%)
+  ;
+  transform: translateY(105%);
+  position: relative;
+  z-index: 1;
+}
+.tree .mid{
+  /* border: 1px solid red; */
+  border-radius: 100%;
+  width: 100%;
+  height: 35%;
+  background-image:
+    conic-gradient( at center 30%, transparent 40%, blue 40%, white, blue 60%, transparent 60%)
+  ;
+  transform: translateY(35%);
+}
+.tree .bottom{
+  /* border: 1px solid red; */
+  border-radius: 100%;
+  width: 100%;
+  height: 35%;
+  background-image:
+    conic-gradient( at center 10%, transparent 40%, blue 40%, white, blue 60%, transparent 60%)
+  ;
+}
+
+.tree .trunk{
+  /* border: 1px solid red; */
+  width: 15%;
+  height: 10%;
+  margin: auto;
+  
+
+  background-image: linear-gradient(90deg,rgb(49, 17, 17), white, rgb(68, 38, 38));
+}
